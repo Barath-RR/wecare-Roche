@@ -1,0 +1,193 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'blog/tracker.css'%}">
+    <link rel="stylesheet" href="D:\schedule_style.css">
+    <title>Mood tracker</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light" style="background-color: #5777ba; margin-top: -2%;">
+        <a class="navbar-brand" href="{% url 'landing' %}" style="margin-left: 48%; color: white; margin-top: 1%; margin-bottom: 1%; font-size: medium;">
+          We Care
+        </a>
+      </nav><br>
+    <h1 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center" style="color: black;"><b>Mood Tracker</b></h1>
+    <br>
+    <P style="text-align:center;font-size:20px;">Write down your thoughts to record and reflect on your experiences.</P>
+    <br>
+    <h3 style="text-align:center;">How are you feeling right now ? </h3>
+    <br>
+    <div class="container px-4">
+    <div class="row gx-5">
+      <div class="col-md-6" style="padding-left: 250px;" >
+          <p>Enter date</p>
+        <input type="text" style="background-color: rgb(255, 255, 255);" class="form-control"   required>
+      </div>
+      <div class="col-md-6" style="padding-right:250px;">
+          <p>Enter time</p>
+          <input type="text" style="background-color: rgb(255, 255, 255);" class="form-control"   required>
+      </div>
+      </div>
+      </div>
+      <br>
+      <p style="text-align:center; font-size:25px ;">Select your mood </p>
+      <br>
+    <div class="container" style="padding-left:240px ;">
+      <svg  width="120" height="100" fill="currentColor" class="bi bi-emoji-frown" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+        </svg>
+      <svg  width="120" height="100" fill="currentColor" class="bi bi-emoji-neutral" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M4 10.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5zm3-4C7 5.672 6.552 5 6 5s-1 .672-1 1.5S5.448 8 6 8s1-.672 1-1.5zm4 0c0-.828-.448-1.5-1-1.5s-1 .672-1 1.5S9.448 8 10 8s1-.672 1-1.5z"/>
+        </svg>
+        <svg  width="120" height="100" fill="currentColor" class="bi bi-emoji-expressionless" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm5 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+        <svg  width="120" height="100" fill="green" class="bi bi-emoji-smile" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+        </svg>
+        <svg  width="120" height="100" fill="currentColor" class="bi bi-emoji-laughing" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M12.331 9.5a1 1 0 0 1 0 1A4.998 4.998 0 0 1 8 13a4.998 4.998 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5zM7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5z"/>
+        </svg>
+      </div>
+      <br>
+      <br>
+      <div class="form-group col-md-9" style="padding-left:320px ;" >
+          <label for="exampleFormControlTextarea3">My Journal</label>
+          <textarea class="form-control" id="exampleFormControlTextarea3" rows="7" placeholder="How are you feeling today.."></textarea>
+        </div>
+        <div class="container" style="width: 50%; display: flex; justify-content:center;">
+          <input style="padding: auto; width: 30%;"  type="submit" id="edit-submit" name="op" value="Submit"
+                     class="form-control-login btn btn-primary btn-lg">
+            </div>
+      <br>
+    <div class="container py-7">
+        <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+          Schedule
+        </h2>
+        <br>
+        <p class="text-sm text-dark mt-0 mb-5 text-center">Manage tasks effectively by scheduling your daily routines.</p>
+        <!-- Days -->
+        <div class="row">
+          <div class="col-lg-4 mb-3" id="Friday, Nov 13th">
+            <h4 class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+              Friday, Nov 13th
+            </h4>
+            <ul class="list-timeline list-timeline-primary">
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">08:00 - 09:00</span> - Morning Hygiene routine</p>
+              </li>
+              <!--<li class="list-timeline-item show p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-2">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-primary font-weight-bold op-8 infinite animated flash" data-animate="flash" data-animate-infinite="1" data-animate-duration="3.5" style="animation-duration: 3.5s;">Now</span> - Vitaly Friedmann</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8 show" id="day-1-item-2"> Talk: Wireframing / <span class="text-primary">Room 19</span> </p>
+              </li>-->
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 10:00</span> -Breakfast and Medication</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-4">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">10:00 - 12:00</span> -Check in for the event</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-1-item-4"> Color therapy session / <span class="text-primary">MaryLand</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">12:00 - 13:00</span> - Lunch</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-6">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">16:00 - 18:00</span> - Walk along with a friend</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-1-item-6"> Talk: Ninja coding / <span class="text-primary">Room 31</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">19:00 - 20:00</span> -Night time routine </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-3" id="Saturday, Nov 14th">
+            <h4 class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+              Saturday, Nov 14th
+            </h4>
+            <ul class="list-timeline list-timeline-primary">
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">08:00 - 09:00</span> - Morning Hygiene Routine</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-2-item-2">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 10:00</span> - Breakfast and medications</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-2-item-2"> Talk: Wireframing / <span class="text-primary">Room 19</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">12:00 - 13:00</span> - Lunch Outside</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-2-item-4">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">13:00 - 15:00</span> - Engage in a activity</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-2-item-4"> Talk: Big Data / <span class="text-primary">Room 19</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:00 - 16:00</span> - Visit the clinic</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-2-item-6">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">18:00 - 19:00</span> - Manage bills</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-2-item-6"> Talk: OpenData / <span class="text-primary">Room 31</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">19:00 - 20:00</span> -Night time routine </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-3" id="Sunday, Nov 15th">
+            <h4 class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+              Sunday, Nov 15th
+            </h4>
+            <ul class="list-timeline list-timeline-primary">
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">07:00 - 08:00</span> -Morning hygiene routine</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-3-item-2">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 11:00</span> - Participate in the community activity</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-3-item-2"> Dementia caregiver association / <span class="text-primary">Room 31</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">12:00 - 13:00</span> - Lunch Break</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-3-item-4">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">13:00 - 15:00</span> -Relax </p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-3-item-4"> Talk: OpenData / <span class="text-primary">Room 31</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:00 - 16:00</span> - Call Ms.Jessica Jones</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-3-item-6">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">16:00 - 18:00</span> - Visit the nursery</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-3-item-6"> Talk: OpenData / <span class="text-primary">Room 31</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">18:00 - 23:00</span> - Night time routine</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="width: 50%; display: flex; justify-content:center;">
+        <input style="padding: auto; width: 30%;"  type="submit" id="edit-submit" name="op" value="Edit"
+                   class="form-control-login btn btn-primary btn-lg">
+          </div>
+      <br>
+      <br>
+    
+      
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

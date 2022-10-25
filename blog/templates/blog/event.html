@@ -1,0 +1,122 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'blog/lassets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'blog/lassets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'blog/lassets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'blog/lassets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'blog/lassets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'blog/lassets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'blog/lassets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'blog/lassets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'blog/event/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-light" style="background-color: #5777ba;">
+    <a class="navbar-brand" href="{% url 'landing' %}" style="margin-left: 48%; color: white; margin-top: 1%; margin-bottom: 1%; font-size: medium;">
+      We Care
+    </a>
+  </nav>
+    <!-- ======= Speakers Section ======= -->
+    <section id="speakers">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Respite and Revive</h2>
+          <p>Look for upcoming events in your locality</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+              <img src="{% static 'blog/event/img/speakers/1.jpg'%}" alt="Speaker 1" class="img-fluid">
+              <div class="details">
+                <h3><a href="{% url 'speaker' %}" style="padding-bottom:20px;" >Infinite colour spot to Brighten your Health.</a></h3>
+                <p>click for more Details and Venue</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+              <img src="{% static 'blog/event/img/speakers/2.jpg'%}" alt="Speaker 2" class="img-fluid">
+              <div class="details">
+                <h3><a href="{% url 'speaker'%}"></a>Return with Lillies to your <br>Loved Ones.</h3>
+                <p>click for more Details and Venue</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+              <img src="{% static 'blog/event/img/speakers/3.jpg'%}" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="{% url 'speaker' %}">Let's go watch Football with <br>Your Friends.</a></h3>
+                <p>Click for more Details and Venue</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+              <img src="{% static 'blog/event/img/speakers/4.jpg'%}" alt="Speaker 4" class="img-fluid">
+              <div class="details">
+                <h3><a href="{% url 'speaker'%}">Plant Trees Event to breathe<br>Fresh Air.</a></h3>
+                <p>Click for more Details and Venue</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+              <img src="{% static 'blog/event/img/speakers/5.jpg'%}" alt="Speaker 5" class="img-fluid">
+              <div class="details">
+                <h3><a href="{% url 'speaker' %}">Brew coffee together to stay <br>Refreshing.</a></h3>
+                <p>Click for more Details and Venue</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+              <img src="{% static 'blog/event/img/speakers/6.jpg'%}" alt="Speaker 6" class="img-fluid">
+              <div class="details">
+                <h3><a href="{% url 'speaker' %}">Excercising to function like a<br>SuperHuman.</a></h3>
+                <p>Click for more Details and Venue</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End Speakers Section -->
+
+    <!-- ======= Venue Section ======= -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'blog/event/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'blog/event/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'blog/event/vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'blog/event/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'blog/event/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'blog/event/js/main.js'%}"></script>
+
+</body>
+
+</html>
